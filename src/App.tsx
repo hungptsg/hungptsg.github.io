@@ -1,24 +1,38 @@
-import React from 'react';
+import { createHashRouter, RouteObject, RouterProvider } from 'react-router';
+import { Home } from './com/Home';
+import { Provider } from 'react-redux';
+import { store } from './rtk/store';
+import { Header } from './layout/Header';
+import { Nav } from './layout/Nav';
+import { JSX } from 'react';
+import { ContentHolder } from './layout/ContentHolder';
+import { Flex } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+type PageInfo = RouteObject & {
+  icon: JSX.Element,
+  title: string
 }
 
-export default App;
+
+const pages: PageInfo[] = [
+  { path: '/', element: <Home />, title: 'Home', icon: <></> },
+]
+
+const router = createHashRouter(pages)
+
+export function App() {
+  return (
+    <Provider store={store}>
+      <Header />
+
+      <Flex id='L_MAIN'>
+        <Nav />
+
+        <ContentHolder>
+          <RouterProvider router={router} />
+        </ContentHolder>
+      </Flex>
+    </Provider>
+  );
+}
