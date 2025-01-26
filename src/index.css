@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text: #e6e6e6;
+    --color-text-subtle: #d2d2d2;
+    --color-hover: #d2d2d2;
+
+    --color-background: #171717;
+    --color-border: #404040;
+
+    --color-code-header: #404040;
+    --color-code-block: #2f2f2f;
+
+    --color-visited: #ac7ee1;
+    --color-hyperlink: #75b6e7;
+
+    --color-primary-base: #75b6e7;
+    --color-primary-background: #004173;
+    --color-primary-hover: #278cda;
+    --color-primary-active: #0078d4;
+
+    --color-secondary-base: #757575;
+    --color-secondary-background: #404040;
+    --color-tertiary-base: #404040;
+    --color-tertiary-background: #171717;
+
+    --color-success-base: #7cbb7b;
+    --color-success-background: #054b16;
+    --color-info-base: #9970d3;
+    --color-info-background: #3b2e58;
+    --color-warning-base: #ffb900;
+    --color-warning-background: #6a4b16;
+    --color-danger-base: #e5a7a8;
+    --color-danger-background: #630001;
+  }
+}
+
+.theme-tw {
+  /* --color-primary: #e2e8f0;
+  --color-secondary: #94a3b8;
+  --color-accent: #38bdf8;
+  --color-hover: #cbd5e1;
+
+  --color-background: #0f172a;
+  --color-bgcontrast: #94a3b8;
+  --color-border: #475569;
+
+  --color-qoute1: #e2e2e2;
+  --color-qoute2: #e2e2e2; */
+}
