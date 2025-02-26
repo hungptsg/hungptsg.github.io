@@ -21,7 +21,7 @@ export const hr_renderer = () => <hr className='my-6   border-color-border' />
 export const h1_renderer = (props: Props<HTMLHeadingElement>) => (
   <h1
     id={extractSlug(props.children)}
-    className='text-4xl font-semibold   pb-2   text-color-text'
+    className="text-4xl font-semibold   pb-2   text-color-text"
   >
     {props.children}
   </h1>
@@ -30,14 +30,14 @@ export const h1_renderer = (props: Props<HTMLHeadingElement>) => (
 export const h2_renderer = (props: Props<HTMLHeadingElement>) => (
   <h2
     id={extractSlug(props.children)}
-    className={`text-2xl font-semibold   pb-2 mt-8 mb-3   text-color-text   border-b border-color-border`}
+    className="text-2xl font-semibold   pb-2 [&:not(:first-child)]:mt-8 mb-3   text-color-text   border-b border-color-border"
   >
     {props.children}
   </h2>
 )
 
 export const p_renderer = (props: Props<HTMLParagraphElement>) => (
-  <p className='[&:not(:first-child)]::mt-4 leading-relaxed   text-color-text'>
+  <p className='[&:not(:first-child)]:mt-4   leading-relaxed   text-color-text'>
     {props.children}
   </p>
 )
