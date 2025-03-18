@@ -3,18 +3,25 @@
 The output `inline code` isa.
 
 
-```csharp
-[Conditional("DEBUG"), Conditional("TEST1")]
-void TraceMethod() {
-    // ...
-}
-```
-```gdscript
-extends Area2D
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
+
+
+```csharp
+func trace_method(): pass
+;;;;
+void TraceMethod() { }
 ```
+
+
+
+
+```csharp
+func do_some(): pass
+;;;;
+void DoSome() { }
+```
+
+
 
 > [!NOTE]  
 > Highlights information that users should take into account, even when skimming.

@@ -1,16 +1,6 @@
-
-
-
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark as codeStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Props } from './md_renderer_1';
-
-
-
-SyntaxHighlighter.registerLanguage('csharp', require('react-syntax-highlighter/dist/esm/languages/prism/csharp').default);
-SyntaxHighlighter.registerLanguage('gdscript', require('react-syntax-highlighter/dist/esm/languages/prism/gdscript').default);
-
-
+import { SyntaxHighlighter, codeStyle } from './SyntaxHighlighter';
+import { TabCode } from './TabCode';
 
 
 
@@ -32,34 +22,20 @@ export const code_renderer = (props: Props<HTMLElement>) => {
       </SyntaxHighlighter>
     )
   }
+
   // code block
   else {
+    const parts = codeContent.split(';;;;');
+    const gd_code = parts[0];
+    const cs_code = parts[1].trimStart();
     return (
-      <div className='rounded-md overflow-hidden   mt-4'>
-        {/* code header */}
-        <div className='flex items-center p-1   bg-color-code-header   text-color-text'>
-          <span className='flex-1   pl-2'>C#</span>
-          {/* nút copy code */}
-          <button
-            className='px-3   hover:bg-color-code-block   border-l'
-            onClick={() => navigator.clipboard.writeText(codeContent)}
-          >
-            Copy
-          </button>
-        </div>
-
-        {/* code block */}
-        <SyntaxHighlighter
-          language='csharp'
-          style={codeStyle}
-          PreTag={'div'}
-          customStyle={{ margin: 0 }}
-          className='border-x-2 border-b-2 border-color-code-header   !rounded-b-md !rounded-t-none'
-        >
-          {codeContent}
-        </SyntaxHighlighter>
-      </div>
+      <TabCode
+        codeBlocks={[gd_code, cs_code]}
+        codeLangs={['gdscript', 'csharp']}
+        codeNames={['GdScript', 'C#']}
+      />
     );
+
   }
 }
 

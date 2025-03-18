@@ -31,7 +31,6 @@ export function ContentHolder() {
         .catch(error => 'Error: ' + error.message);
       setMarkdown(p);
     }
-
     fetchData("Draft.md");
   }, [location.pathname]);
 

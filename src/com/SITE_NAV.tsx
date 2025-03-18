@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router';
 import { JSX } from 'react';
-import { Svg2D } from './icons';
+import { Svg2D, Svg3D } from './icons';
 import { Grouping, RouteInfo } from '../routeInfo';
 
 
@@ -83,7 +83,7 @@ export function SITE_NAV(props: {
         )}
       </TopicWrapper>
 
-      <TopicWrapper title='3D' icon={<Svg2D />}>
+      <TopicWrapper title='3D' icon={<Svg3D />}>
 
       </TopicWrapper>
     </nav>

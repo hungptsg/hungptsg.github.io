@@ -33,7 +33,7 @@ export const routeInfo: RouteInfo[] = [
     path: '/draft',
     element: <ContentHolder />,
     icon: <Svg2D />,
-    group:  Grouping._3d
+    group:  Grouping._2d
   },
 ]
 
