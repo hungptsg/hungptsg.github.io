@@ -2,10 +2,9 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import { Provider } from 'react-redux';
 import { Flex } from 'antd';
 import { store } from './rtk/store';
-import { ContentHolder } from './com/L_CONT';
-import { L_NAV } from './com/L_NAV';
-import { L_HEAD } from './com/L_HEAD';
-import { PageHome } from './page/PageHome';
+import { SITE_NAV } from './com/SITE_NAV';
+import { SITE_HEADER } from './com/SITE_HEADER';
+import { routeInfo } from './routeInfo';
 
 
 
@@ -14,15 +13,14 @@ export function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className='bg-color-background'>
-          <L_HEAD />
+          <SITE_HEADER />
 
           <Flex>
-            <L_NAV />
+            <SITE_NAV routeInfo={routeInfo} />
             <Routes>
-              <Route path='/' element={<PageHome />} />
-              <Route path='/draft' element={<ContentHolder />} />
-
-            
+              {routeInfo.map(ri =>
+                <Route key={ri.index} path={ri.path} element={ri.element} />
+              )}
               <Route path='*' element={<div>404 Not Found</div>} />
             </Routes>
           </Flex>

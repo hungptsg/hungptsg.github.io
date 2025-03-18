@@ -1,12 +1,12 @@
 import { Divider } from 'antd';
 import { NavLink, useLocation } from 'react-router';
-import { findPageInfo } from '../pageInfo';
+import { findRouteInfo } from '../routeInfo';
 
 
 
-export function L_HEAD() {
+export function SITE_HEADER() {
   const location = useLocation()
-  const title = findPageInfo(location.pathname)?.title || ''
+  const title = findRouteInfo(location.pathname)?.title || ''
 
   return (
     <header id='L_HEAD' className='p-2 h-12   flex border-b border-color-border'>
