@@ -5,3 +5,5 @@ SyntaxHighlighter.registerLanguage('gdscript', require('react-syntax-highlighter
 
 export { SyntaxHighlighter };
 export { a11yDark as codeStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
+export { docco as codeStyle2 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+

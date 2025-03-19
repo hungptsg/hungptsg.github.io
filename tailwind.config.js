@@ -41,6 +41,18 @@ module.exports = {
         'color-warning-background': 'var(--color-warning-background)',
         'color-danger-base': 'var(--color-danger-base)',
         'color-danger-background': 'var(--color-danger-background)',
+        
+        
+        'color-gd-default': '#cdcfd2',
+        'color-gd-bg': '#1d2229',
+        'color-gd-number': '#a1ffe0',
+        'color-gd-string': '#ffeda1',
+        'color-gd-operator': '#abc9ff',
+        'color-gd-punctuation': '#abc9ff',
+        'color-gd-function': '#66e5ff',
+        'color-gd-class-name': '#c7ffed',
+        'color-gd-keyword': '#ff7085',
+        'color-gd-comment': '#75787d',
       },
     }
   },

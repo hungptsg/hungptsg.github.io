@@ -86,6 +86,7 @@ export const blockquote_renderer = (props: Props<HTMLQuoteElement>) => {
   }
 
   return (
+    // MS/GIT style
     <blockquote className={`mt-4 py-2 px-4   border-l-4 ${colorSet[0]}   text-sm [&>p:first-child]:mt-0`}>
       {text !== 'None' && (
         <div className={`flex items-center h-4   ${colorSet[1]}`}>

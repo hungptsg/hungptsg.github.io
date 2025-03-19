@@ -26,6 +26,7 @@ export function App() {
           </Flex>
         </div>
       </BrowserRouter>
+      
     </Provider>
   );
 }

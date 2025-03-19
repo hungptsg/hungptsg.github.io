@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { codeStyle, SyntaxHighlighter } from "./SyntaxHighlighter";
+import { useState } from 'react';
+import { codeStyle, SyntaxHighlighter } from './SyntaxHighlighter';
 
 
 export function TabCode(props: {
@@ -8,8 +8,8 @@ export function TabCode(props: {
   codeNames: string[]
 }) {
   const [activeTab, setActiveTab] = useState(0);
-  const styleActive = '  text-color-text-subtle'
-  const styleInActive = '    text-color-secondary-base'
+  const styleActive = ' text-color-text-subtle'
+  const styleInActive = ' text-color-secondary-base'
 
   return (
     <div className='rounded-md overflow-hidden   mt-4'>
@@ -39,11 +39,14 @@ export function TabCode(props: {
       {props.codeBlocks.map((code, idx) =>
         <div key={idx} hidden={activeTab !== idx}>
           <SyntaxHighlighter
+            useInlineStyles={false}
+            className={'code-block-' + props.codeLangs[idx]}
             language={props.codeLangs[idx]}
             style={codeStyle}
-            PreTag={'div'}
-            customStyle={{ margin: 0 }}
-            className='border-x-2 border-b-2 border-color-code-header   !rounded-b-md !rounded-t-none'
+
+            codeTagProps={{
+              className: 'language-' + props.codeLangs[idx]
+            }}
           >
             {code}
           </SyntaxHighlighter>

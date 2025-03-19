@@ -5,6 +5,7 @@
   "homepage": "https://hungptsg.github.io",
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
+    "@giscus/react": "^3.1.0",
     "@reduxjs/toolkit": "^2.5.0",
     "@types/lodash": "^4.17.14",
     "@types/react": "^19.0.4",
