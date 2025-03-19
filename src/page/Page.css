@@ -2,43 +2,44 @@
 
 .content {
   @apply p-8 flex-1 overflow-y-auto h-[calc(100vh-48px)];
-
-  h1 {
-    @apply text-4xl font-semibold pb-2 [&:not(:first-child)]:mt-4 text-color-text;
-  }
-
-  h2 {
-    @apply text-2xl font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text border-b border-color-border;
-  }
-
-  h3 {
-    @apply text-xl font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text;
-  }
-
-  h4 {
-    @apply text-lg font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text;
-  }
-
-  h5 {
-    @apply text-base font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text;
-  }
-
-  h6 {
-    @apply text-sm font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text-subtle;
-  }
-
-  p {
-    @apply [&:not(:first-child)]:mt-4 leading-relaxed text-color-text;
-  }
-
-  a {
-    @apply text-color-hyperlink hover:text-color-primary-hover hover:underline transition-none;
-  }
-
-  hr {
-    @apply my-6 border-color-border;
-  }
 }
+
+.content h1 {
+  @apply text-4xl font-semibold pb-2 [&:not(:first-child)]:mt-4 text-color-text;
+}
+
+.content h2 {
+  @apply text-2xl font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text border-b border-color-border;
+}
+
+.content h3 {
+  @apply text-xl font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text;
+}
+
+.content h4 {
+  @apply text-lg font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text;
+}
+
+.content h5 {
+  @apply text-base font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text;
+}
+
+.content h6 {
+  @apply text-sm font-semibold pb-2 [&:not(:first-child)]:mt-8 mb-3 text-color-text-subtle;
+}
+
+.content p {
+  @apply [&:not(:first-child)]:mt-4 leading-relaxed text-color-text;
+}
+
+.content a {
+  @apply text-color-hyperlink hover:text-color-primary-hover hover:underline transition-none;
+}
+
+.content hr {
+  @apply my-6 border-color-border;
+}
+
 
 .inline-code {
   color: rgb(248, 248, 242);
@@ -61,40 +62,40 @@
 /* code-block */
 .code-block-gdscript {
   @apply m-0 p-4 bg-color-gd-bg border-x-2 border-b-2 border-color-code-header rounded-b-md rounded-t-none;
+}
 
-  .language-gdscript {
-    @apply text-color-gd-default;
+.language-gdscript {
+  @apply text-color-gd-default;
+}
 
-    .token.comment {
-      @apply text-color-gd-comment;
-    }
+.token.comment {
+  @apply text-color-gd-comment;
+}
 
-    .token.keyword {
-      @apply text-color-gd-keyword;
-    }
+.token.keyword {
+  @apply text-color-gd-keyword;
+}
 
-    .token.class-name {
-      @apply text-color-gd-class-name;
-    }
+.token.class-name {
+  @apply text-color-gd-class-name;
+}
 
-    .token.function {
-      @apply text-color-gd-function;
-    }
+.token.function {
+  @apply text-color-gd-function;
+}
 
-    .token.punctuation {
-      @apply text-color-gd-punctuation;
-    }
+.token.punctuation {
+  @apply text-color-gd-punctuation;
+}
 
-    .token.operator {
-      @apply text-color-gd-operator;
-    }
+.token.operator {
+  @apply text-color-gd-operator;
+}
 
-    .token.string {
-      @apply text-color-gd-string;
-    }
+.token.string {
+  @apply text-color-gd-string;
+}
 
-    .token.number {
-      @apply text-color-gd-number;
-    }
-  }
+.token.number {
+  @apply text-color-gd-number;
 }

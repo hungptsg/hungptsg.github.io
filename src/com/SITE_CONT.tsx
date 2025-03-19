@@ -4,12 +4,12 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkToc from 'remark-toc';
 import rehypeRaw from 'rehype-raw';
+import Giscus from '@giscus/react';
 import { ul_renderer } from './md_renderer_1';
 // import { table_renderer, tbody_renderer, td_renderer, th_renderer, thead_renderer, tr_renderer } from './md_renderer_2';
 import { blockquote_renderer } from './md_renderer_4';
-import '../page/Page.css';
 import { TabCode } from './TabCode';
-import Giscus from '@giscus/react';
+import '../page/Page.css';
 
 
 

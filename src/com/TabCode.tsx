@@ -20,6 +20,7 @@ export function TabCode(props: {
               key={idx}
               className={`px-3   hover:bg-color-code-block` + (idx === activeTab ? styleActive : styleInActive)}
               onClick={() => setActiveTab(idx)}
+              hidden={props.codeBlocks[idx].length === 0}
             >
               {cn}
             </button>
