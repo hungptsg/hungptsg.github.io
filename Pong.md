@@ -30,7 +30,7 @@ Traditionally, a pong game will have a top and bottom walls to bounce the ball b
 
 > `StaticBody2D` are physics objects that do not move at all, like walls and floors, but other physics objects can "interact" with. The two `CollisionShape2D` of this `Walls` contain data on where the `StaticBody2D` can be collided with. 
 
-![pong_1](./image/pong_1.png)
+![pong_1](/image/pong_1.png)
 
 
 
@@ -39,7 +39,7 @@ Add a paddle that two players can control.
 
 At **Project** > **Project Settings...** > **Input Map** tab, add some "input action" for the players to move. Wire them to the desired physical keys on you keyboard.
 
-![pong_2](./image/pong_2.png)
+![pong_2](/image/pong_2.png)
 
 From the `Main1` node, add two `CharacterBody2D` with perspective `Polygon2D` for sprite and a `CollisionShape2D` for collision. Rename to `Paddle_P1` and `Paddle_P2`. 
 
@@ -49,7 +49,7 @@ Use `RectangleShape2D` for both `CollisionShape2D` `shape` on the **Inspector** 
 
 > `CharacterBody2D` are physics objects with user input, intended for... characters. Heavily customized for platformer games, they move by setting the `velocity` and then call `move_and_slide`.
 
-![pong_3](./image/pong_3.png)
+![pong_3](/image/pong_3.png)
 
 Click both paddle and click **Attach a new script to the selected node** (document icon with plus sign) button on the *Scene* tab to attach scripts to both paddle. 
 
@@ -76,7 +76,7 @@ func _physics_process(delta): # called every 1/60 second
 
 Press the **Run Project** button on the top-right. Now you have something like this. 
 
-![pong_4](./image/pong_4.gif)
+![pong_4](/image/pong_4.gif)
 
 
 
@@ -92,7 +92,7 @@ Use `CircleShape2D` for the `CollisionShape2D` `shape` on the **Inspector** tab.
 
 Optionally, add an `AudioStreamPlayer2D` for when the ball collides. A simple `.wave` sfx can be made with [ChipTone](https://sfbgames.itch.io/chiptone).
 
-![pong_5](./image/pong_5.png)
+![pong_5](/image/pong_5.png)
 
 
 
@@ -180,7 +180,7 @@ In our setup, by default, the paddles will participate in collision too, when th
 
 This is not what we desired.
 
-![pong_6](./image/pong_6.gif)
+![pong_6](/image/pong_6.gif)
 
 All three types of `PhysicsBody2D` we used are `StaticBody2D`, `CharacterBody2D` and `RigidBody2D`. All of them has `collision_layer` and `collision_mask` property.
 
