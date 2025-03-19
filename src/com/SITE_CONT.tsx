@@ -5,10 +5,11 @@ import remarkGfm from 'remark-gfm'
 import remarkToc from 'remark-toc';
 import rehypeRaw from 'rehype-raw';
 import { ul_renderer } from './md_renderer_1';
-import { table_renderer, tbody_renderer, td_renderer, th_renderer, thead_renderer, tr_renderer } from './md_renderer_2';
+// import { table_renderer, tbody_renderer, td_renderer, th_renderer, thead_renderer, tr_renderer } from './md_renderer_2';
 import { blockquote_renderer } from './md_renderer_4';
 import '../page/Page.css';
 import { TabCode } from './TabCode';
+import Giscus from '@giscus/react';
 
 
 
@@ -59,7 +60,6 @@ export function ContentHolder(props: {
           h4: props => (<h4 id={extractSlug(props.children)}>{props.children}</h4>),
           h5: props => (<h5 id={extractSlug(props.children)}>{props.children}</h5>),
           h6: props => (<h6 id={extractSlug(props.children)}>{props.children}</h6>),
-
           code: props => {
             const codeContent = props.children?.toString() || '';
             // inline code
@@ -86,17 +86,34 @@ export function ContentHolder(props: {
           },
           ul: ul_renderer,
           blockquote: blockquote_renderer,
-          thead: thead_renderer,
-          tbody: tbody_renderer,
-          tr: tr_renderer,
-          th: th_renderer,
-          td: td_renderer,
-          table: table_renderer,
+          // thead: thead_renderer,
+          // tbody: tbody_renderer,
+          // tr: tr_renderer,
+          // th: th_renderer,
+          // td: td_renderer,
+          // table: table_renderer,
         }}
         className='max-w-3xl'
       >
         {markdown}
       </Markdown>
+
+      <Giscus
+        id="comments"
+        repo="hungptsg/mini-projects"
+        repoId="R_kgDOOKxbMQ"
+        category="General"
+        categoryId="DIC_kwDOOKxbMc4CoNiH"
+        mapping="pathname"
+
+        term="Welcome to @giscus/react component!"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme="dark"
+        lang="en"
+        loading="lazy"
+      />
     </main>
   );
 }

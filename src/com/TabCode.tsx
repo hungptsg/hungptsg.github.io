@@ -39,14 +39,11 @@ export function TabCode(props: {
       {props.codeBlocks.map((code, idx) =>
         <div key={idx} hidden={activeTab !== idx}>
           <SyntaxHighlighter
+            style={codeStyle}
             useInlineStyles={false}
             className={'code-block-' + props.codeLangs[idx]}
             language={props.codeLangs[idx]}
-            style={codeStyle}
-
-            codeTagProps={{
-              className: 'language-' + props.codeLangs[idx]
-            }}
+            codeTagProps={{ className: 'language-' + props.codeLangs[idx] }}
           >
             {code}
           </SyntaxHighlighter>
