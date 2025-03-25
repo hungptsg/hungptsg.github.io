@@ -5,7 +5,7 @@ import { Svg2D } from './com/icons'
 
 
 export enum Grouping {
-  _2d, _3d, Misc, Hidden
+  Game2d, Game3d, Recipe2d, Recipe3d, Misc, Hidden
 }
 
 export type RouteInfo = {
@@ -25,23 +25,31 @@ export const routeInfo: RouteInfo[] = [
     path: '/',
     element: <PageHome />,
     icon: <Svg2D />,
-    group: Grouping._2d
-  },
-  {
-    index: 1,
-    title: 'Draft',
-    path: '/draft',
-    element: <ContentHolder filename='Draft.md' />,
-    icon: <Svg2D />,
     group: Grouping.Hidden
   },
   {
+    index: 1,
+    title: 'Draft', path: '/draft',
+    element: <ContentHolder filename='Draft.md' />,
+    icon: <Svg2D />, group: Grouping.Hidden
+  },
+  {
     index: 2,
-    title: 'Pong',
-    path: '/2d/pong',
+    title: 'Pong', path: '/game-2d/pong',
     element: <ContentHolder filename='Pong.md' />,
-    icon: <Svg2D />,
-    group: Grouping._2d
+    icon: <Svg2D />, group: Grouping.Game2d
+  },
+  {
+    index: 3,
+    title: 'Tictactoe', path: '/game-2d/tictactoe',
+    element: <ContentHolder filename='Tictactoe.md' />,
+    icon: <Svg2D />, group: Grouping.Game2d
+  },
+  {
+    index: 4,
+    title: 'Grid', path: '/recipe-2d/grid',
+    element: <ContentHolder filename='Grid.md' />,
+    icon: <Svg2D />, group: Grouping.Hidden
   },
 ]
 

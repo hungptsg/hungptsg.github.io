@@ -69,22 +69,28 @@ export function SITE_NAV(props: {
   const location = useLocation();
   const current_path = location.pathname;
 
+  function renderGroup(icon: JSX.Element, group: Grouping) {
+    return routeInfo.filter(ri => ri.group === group).map(ri =>
+      <Topic
+        key={ri.index} title={ri.title}
+        icon={icon}
+        linkTo={ri.path} currentPath={current_path}
+      />
+    )
+  }
+
   return (
     <nav id='L_NAV' className='w-72 p-4 sticky overflow-y-auto h-[calc(100vh-48px)]   border-r border-color-border'>
-      <TopicWrapper title='2D' icon={<Svg2D />}>
-        {routeInfo.filter(ri => ri.group === Grouping._2d).map(ri =>
-          <Topic
-            key={ri.index}
-            title={ri.title}
-            icon={<Svg2D />}
-            linkTo={ri.path}
-            currentPath={current_path}
-          />
-        )}
+      <TopicWrapper title='Game - 2d' icon={<Svg2D />}>
+        {renderGroup(<Svg2D />, Grouping.Game2d)}
       </TopicWrapper>
 
-      <TopicWrapper title='3D' icon={<Svg3D />}>
+      {/* <TopicWrapper title='Game - 3d' icon={<Svg3D />}>
+        {renderGroup(<Svg2D />, Grouping.Game3d)}
+      </TopicWrapper> */}
 
+      <TopicWrapper title='Recipe - 2d' icon={<Svg2D />}>
+        {renderGroup(<Svg2D />, Grouping.Recipe2d)}
       </TopicWrapper>
     </nav>
   );
